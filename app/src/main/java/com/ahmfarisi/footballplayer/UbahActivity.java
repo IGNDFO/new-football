@@ -41,11 +41,11 @@ public class UbahActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String getnama,getnomor,getklub;
+                String getNama,getNomor,getKlub;
 
-                getnama= etNama.getText().toString();
-                getnomor= etNomor.getText().toString();
-                getklub= etKlub.getText().toString();
+                getNama= etNama.getText().toString();
+                getNomor= etNomor.getText().toString();
+                getKlub= etKlub.getText().toString();
 
 
 
@@ -60,7 +60,7 @@ public class UbahActivity extends AppCompatActivity {
                     etKlub.setError("Klub Tidak Boleh Kosong");
                 }
                 else{
-                    long eks = myDB.tambahPlayer(nama, nomor, klub);
+                    long eks = myDB.ubahplayer(id,getNama, getNomor, getKlub);
                     if(eks == -1){
                         Toast.makeText(UbahActivity.this, "Gagal Menambah Data", Toast.LENGTH_SHORT).show();
                         etNama.requestFocus();
