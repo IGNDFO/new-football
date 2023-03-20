@@ -35,8 +35,21 @@ public class UbahActivity extends AppCompatActivity {
         etKlub.setText(klub);
 
         btnubah.setOnClickListener(new View.OnClickListener() {
+
+
+
             @Override
             public void onClick(View v) {
+
+                String getnama,getnomor,getklub;
+
+                getnama= etNama.getText().toString();
+                getnomor= etNomor.getText().toString();
+                getklub= etKlub.getText().toString();
+
+
+
+
                 if(nama.trim().equals("")){
                     etNama.setError("Nama Player Tidak Boleh Kosong");
                 }
