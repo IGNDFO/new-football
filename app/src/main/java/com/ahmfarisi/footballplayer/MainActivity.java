@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         SQliteToArrayList();
 
-        adPlayer = new AdapterFootballPlayer(MainActivity.this, arrNama, arrNomor, arrKlub,arrid);
+        adPlayer = new AdapterFootballPlayer(MainActivity.this, arrid,arrNama, arrNomor, arrKlub);
 
         rvPlayer.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         rvPlayer.setAdapter(adPlayer);
