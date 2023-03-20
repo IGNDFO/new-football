@@ -3,6 +3,7 @@ package com.ahmfarisi.footballplayer;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,7 +58,6 @@ public class AdapterFootballPlayer extends RecyclerView.Adapter<AdapterFootballP
             tvKlub = itemView.findViewById(R.id.tv_klub);
             tvid = itemView.findViewById(R.id.tv_ID);
 
-
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
@@ -69,7 +69,12 @@ public class AdapterFootballPlayer extends RecyclerView.Adapter<AdapterFootballP
                     pesan.setPositiveButton("UBAH", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-
+                            Intent varIntent =new Intent(ctx,UbahActivity.class);
+                            varIntent.putExtra("varID",tvid.getText().toString());
+                            varIntent.putExtra("varnama",tvNama.getText().toString());
+                            varIntent.putExtra("varnomor",tvNomor.getText().toString());
+                            varIntent.putExtra("varklub",tvKlub.getText().toString());
+                            ctx.startActivity(varIntent);
                         }
                     });
 

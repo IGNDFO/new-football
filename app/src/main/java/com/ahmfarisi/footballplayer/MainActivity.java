@@ -52,21 +52,23 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
             while (varCursor.moveToNext()){
+                arrid.add(varCursor.getString(0));
                 arrNama.add(varCursor.getString(1));
                 arrNomor.add(varCursor.getString(2));
                 arrKlub.add(varCursor.getString(3));
-                arrid.add(varCursor.getString(0));
+
 
             }
         }
     }
 
     private void tampilPlayer(){
+        arrid = new ArrayList<>();
         arrNama = new ArrayList<>();
         arrNomor = new ArrayList<>();
         arrKlub = new ArrayList<>();
 
-        arrid = new ArrayList<>();
+
 
         SQliteToArrayList();
 

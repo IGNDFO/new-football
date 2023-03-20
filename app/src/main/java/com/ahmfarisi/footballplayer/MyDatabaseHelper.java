@@ -78,7 +78,7 @@ public  long ubahplayer(String nama,String id, String nomor,String klub){
         ContentValues cv = new ContentValues();
                 cv.put(FIELD_KLUB,klub);
                 cv.put(FIELD_NAMA,nama);
-        cv.put(FIELD_NOMOR,nomor);
+                cv.put(FIELD_NOMOR,nomor);
 
     long eksekusi = db.update(TABLE_NAME,cv,"id= ?", new String[]{});
     return eksekusi;
